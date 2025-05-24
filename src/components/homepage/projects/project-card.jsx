@@ -27,38 +27,71 @@ function ProjectCard({ project }) {
         </p>
       </div>
 <div className="overflow-hidden border-t-[2px] border-indigo-900 px-4 lg:px-8 py-4 lg:py-8">
-{hasMultipleImages ? (
-        // Multiple images: use the marquee slider
-        <div className="px-4 lg:px-8 py-3 lg:py-5 relative">
-          <Marquee speed={50} pauseOnHover={true} gradient={false}>
-            {project.images.map((image, index) => (
-              <div key={index} className="mx-4">
-                <Image
-                  src={image}
-                  alt={`${project.name} image ${index + 1}`}
-                  width={500}
-                  height={300}
-                  className="rounded-lg"
-                />
-              </div>
-            ))}
-          </Marquee>
-        </div>
-      ) : (
-        // Single image: render it normally.
-        <div className="px-4 lg:px-8 py-3 lg:py-5 relative">
-          {/* If images is an array but only one element, extract that one */}
-          <img
-            src={
-              Array.isArray(project.images)
-                ? project.images[0]
-                : project.images
-            }
-            alt={`${project.name} image`}
-            className="w-full h-auto object-cover rounded-lg mb-4"
-          />
-        </div>
-      )}
+  {project.id === 3 ? (
+    // Styles spécifiques pour le projet avec id: 3
+    hasMultipleImages ? (
+      <div className="px-4 lg:px-8 py-3 lg:py-5 relative">
+        <Marquee speed={50} pauseOnHover={true} gradient={false}>
+          {project.images.map((image, index) => (
+            <div key={index} className="mx-4">
+              <Image
+                src={image}
+                alt={`${project.name} image ${index + 1}`}
+                width={200} // Réduit la largeur
+                height={400} // Réduit la hauteur
+                className="rounded-lg object-contain" // Affiche toute l'image
+              />
+            </div>
+          ))}
+        </Marquee>
+      </div>
+    ) : (
+      <div className="px-4 lg:px-8 py-3 lg:py-5 relative">
+        <Image
+          src={
+            Array.isArray(project.images)
+              ? project.images[0]
+              : project.images
+          }
+          alt={`${project.name} image`}
+          width={200} // Réduit la largeur
+          height={400} // Réduit la hauteur
+          className="rounded-lg object-contain" // Affiche toute l'image
+        />
+      </div>
+    )
+  ) : (
+    // Styles par défaut pour les autres projets
+    hasMultipleImages ? (
+      <div className="px-4 lg:px-8 py-3 lg:py-5 relative">
+        <Marquee speed={50} pauseOnHover={true} gradient={false}>
+          {project.images.map((image, index) => (
+            <div key={index} className="mx-4">
+              <Image
+                src={image}
+                alt={`${project.name} image ${index + 1}`}
+                width={500}
+                height={300}
+                className="rounded-lg"
+              />
+            </div>
+          ))}
+        </Marquee>
+      </div>
+    ) : (
+      <div className="px-4 lg:px-8 py-3 lg:py-5 relative">
+        <img
+          src={
+            Array.isArray(project.images)
+              ? project.images[0]
+              : project.images
+          }
+          alt={`${project.name} image`}
+          className="w-full h-auto object-cover rounded-lg mb-4"
+        />
+      </div>
+    )
+  )}
 
       
         <code className="font-mono text-xs md:text-sm lg:text-base">
@@ -92,9 +125,7 @@ function ProjectCard({ project }) {
             <span className="text-gray-400">{"],"}</span>
           </div>
           <div>
-            <span className="ml-4 lg:ml-8 mr-2 text-white">myRole:</span>
             <span className="text-orange-400">{project.role}</span>
-            <span className="text-gray-400">,</span>
           </div>
           <div className="ml-4 lg:ml-8 mr-2">
             <span className="text-white">Description:</span>

@@ -9,6 +9,6 @@ export const educations = [
     id: 2,
     title: "CPGE",
     duration: "2020 - 2022",
-    institution: "CPGE MOHAMMED 6 , KENITRA(MAROC)",
+    institution: "CPGE IBN GHAZI , RABAT (MAROC)",
   }
 ]

@@ -10,9 +10,9 @@ import ScrollToTop from "/src/components/helper/scroll-to-top";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
-  title: "Portfolio de Taha Bouiber",
+  title: "Portfolio de Anas Mahhou",
   description:
-    "Je m'appelle Taha Bouiber, et je suis un programmeur passionné et curieux, avec un fort esprit d'auto-apprentissage. J'aime explorer de nouvelles technologies et résoudre des problèmes complexes. Fortement intéressé par le développement web, logiciel et mobile, je m'efforce de créer des expériences utilisateur intuitives et élégantes. Compétent en JavaScript, j'utilise ce langage pour divers projets. Actuellement, je recherche un stage de fin d'études afin de mettre mes compétences en pratique et contribuer à des projets innovants."
+    "Je m'appelle Anas Mahhou, et je suis un programmeur passionné et curieux, avec un fort esprit d'auto-apprentissage. J'aime explorer de nouvelles technologies et résoudre des problèmes complexes. Fortement intéressé par le développement web, logiciel et mobile, je m'efforce de créer des expériences utilisateur intuitives et élégantes. Compétent en JavaScript, j'utilise ce langage pour divers projets. Actuellement, je recherche un stage de fin d'études afin de mettre mes compétences en pratique et contribuer à des projets innovants."
 };
 
 export default function RootLayout({ children }) {

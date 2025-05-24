@@ -25,10 +25,10 @@ function AboutSection() {
         <div className="flex justify-center order-1 lg:order-2">
           <Image
             src={personalData.profile}
-            width={280}
-            height={280}
-            alt="Taha Bouiber"
-            className="rounded-lg transition-all duration-1000 hover:scale-110 cursor-pointer"
+            width={256}  // Ajout de la largeur requise
+            height={256} // Ajout de la hauteur requise
+            alt="Anas Mahhou"
+            className="w-64 h-64 object-cover rounded-full transition-all duration-1000 hover:scale-110 cursor-pointer"
           />
         </div>
       </div>
