@@ -1,5 +1,5 @@
 // @flow strict
-
+"use client";
 import { personalData } from "/src/utils/data/personal-data";
 import Image from "next/image";
 
